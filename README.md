@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/500f3ce6-4b7e-4de3-83b1-5a7cf982ef57/deploy-status)](https://app.netlify.com/sites/pedantic-lalande-031aef/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
