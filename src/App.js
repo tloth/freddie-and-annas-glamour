@@ -1,24 +1,21 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import FlowerPile from './components/FlowerPile';
+import Avatar from './components/Avatar';
+import TimeBar from './components/TimeBar';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <FlowerPile user='1'/>
+      <TimeBar user='1'/>
+      <Avatar user='1'/>
+
+
+      <FlowerPile user='2'/>
+      <TimeBar user='2'/>
+      <Avatar user='2'/>
     </div>
   );
 }
