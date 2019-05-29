@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import FlowerPile from './components/FlowerPile';
 import Avatar from './components/Avatar';
