@@ -5,8 +5,13 @@ const TimeBar = props => {
     const [time, setTime] = React.useState(10);
 
     const decrement = () => {
-        setTime(oldTime => (oldTime === 0) ? 0 : oldTime - 1);
-        window.setTimeout(decrement, 1000);
+        setTime(oldTime => {
+           if (oldTime === 0) return 0;
+           else {
+                window.setTimeout(decrement, 1000);
+                return oldTime - 1;
+           }
+        })
     }
 
     return (
