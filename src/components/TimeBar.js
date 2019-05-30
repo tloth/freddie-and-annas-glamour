@@ -1,18 +1,21 @@
 import React from 'react';
 
-import { ReactComponent as innerBar } from '../assets/innerBar.svg';
+import { ReactComponent as InnerBar } from '../assets/innerBar.svg';
 
 const TimeBar = ({userData}) => {
   
     const [time, setTime] = React.useState(10);
-    const [barHeight, SetBarHeight] = React.useState(100);
+    const [barHeight, setBarHeight] = React.useState(100);
 
     React.useEffect(() => {
         if (userData && userData.followers > 10) {
             setTime(userData.followers);
-            SetBarHeight(time/userData.followers);
         }
     }, [userData]);
+
+    React.useEffect(() => {
+        if (userData) setBarHeight(time/userData.followers*100);
+    }, [userData, time]);
     
     const decrement = () => {
         setTime(oldTime => {
@@ -24,15 +27,17 @@ const TimeBar = ({userData}) => {
         })
     };
 
+    console.log(barHeight);
+
     const barStyle = {
-        height: barHeight +'%'
+        height: barHeight+'%'
     }
 
     return (
-    <div> 
+    <div className='timeContainer'> 
         <button onClick={decrement}>CLICK ME</button> 
         <p>Time: {time}</p>
-        <img src=''></img>
+        <InnerBar style={barStyle} className='innerBar' />
     </div>
          );
 }
