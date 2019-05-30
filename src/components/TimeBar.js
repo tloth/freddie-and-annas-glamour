@@ -2,9 +2,8 @@ import React from 'react';
 
 import { ReactComponent as InnerBar } from '../assets/innerBar.svg';
 
-const TimeBar = ({userData}) => {
+const TimeBar = ({ userData, time, setTime }) => {
   
-    const [time, setTime] = React.useState(10);
     const [barHeight, setBarHeight] = React.useState(100);
 
     React.useEffect(() => {
