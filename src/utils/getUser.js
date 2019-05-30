@@ -9,7 +9,9 @@ const checkResponse = response => {
 }
 
 export const getUserData = username => {
-    const url = `https://api.github.com/users/${username}?access_token=${token}`;
+    let url = `https://api.github.com/users/${username}`;
+    if (token) url = url.concat(`?access_token=${token}`);
+    console.log(url);
     return fetch(url)
             .then(checkResponse)
             .catch(err => {
