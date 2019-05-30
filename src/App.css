@@ -1,7 +1,10 @@
 .App {
   text-align: center;
-  max-height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .App-logo {
@@ -41,8 +44,14 @@
   align-items: center;
 }
 
-img {
+.left {
   height: 5em;
   width: 5em;
-  transform: skewX(-10deg);
+  transform: skewX(-5deg);
+}
+
+.right {
+  height: 5em;
+  width: 5em;
+  transform: skewX(5deg);
 }

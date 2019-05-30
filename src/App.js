@@ -15,19 +15,18 @@ function App() {
       <Avatar 
         userData={userData1}
         setUserData={setUserData1}
-        username='Fweddi'
+        username='jokosanyang'
         position='left'
       />
-
-
-      <FlowerPile user='2'/>
-      <TimeBar userData={userData2}/>
+      
       <Avatar 
         userData={userData2}
         setUserData={setUserData2}
-        username='tloth'
+        username='charlielafosse'
         position='right'
       />
+      <TimeBar userData={userData2}/>
+      <FlowerPile user='2'/>
     </div>
   );
 }
