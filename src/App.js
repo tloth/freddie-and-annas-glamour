@@ -8,22 +8,26 @@ function App() {
   const [userData1, setUserData1] = React.useState(null);
   const [userData2, setUserData2] = React.useState(null);
 
-
   return (
     <div className="App">
       <FlowerPile user='1'/>
-      <TimeBar user='1'/>
+      <TimeBar userData={userData1}/>
       <Avatar 
-        userData1={userData1}
-        setUserData1={setUserData1}
-        userData2={userData2}
-        setUserData2={setUserData2}
+        userData={userData1}
+        setUserData={setUserData1}
+        username='Fweddi'
+        position='left'
       />
 
 
       <FlowerPile user='2'/>
-      <TimeBar user='2'/>
-      <Avatar user='2'/>
+      <TimeBar userData={userData2}/>
+      <Avatar 
+        userData={userData2}
+        setUserData={setUserData2}
+        username='tloth'
+        position='right'
+      />
     </div>
   );
 }
