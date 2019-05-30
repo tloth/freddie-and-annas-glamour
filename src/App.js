@@ -8,9 +8,16 @@ function App() {
   const [userData1, setUserData1] = React.useState(null);
   const [userData2, setUserData2] = React.useState(null);
 
+  const [flowerCount1, setFlowerCount1] = React.useState(0);
+  const [flowerCount2, setFlowerCount2] = React.useState(0);
+
   return (
     <div className="App">
-      <FlowerPile user='1'/>
+      <FlowerPile
+        flowerCount={flowerCount1}
+        setFlowerCount={setFlowerCount1}
+        position='left'
+      />
       <TimeBar userData={userData1}/>
       <Avatar 
         userData={userData1}
@@ -22,11 +29,15 @@ function App() {
       <Avatar 
         userData={userData2}
         setUserData={setUserData2}
-        username='charlielafosse'
+        username='Baalwaan'
         position='right'
       />
       <TimeBar userData={userData2}/>
-      <FlowerPile user='2'/>
+      <FlowerPile
+         flowerCount={flowerCount2}
+         setFlowerCount={setFlowerCount2}
+        position='right'
+      />
     </div>
   );
 }

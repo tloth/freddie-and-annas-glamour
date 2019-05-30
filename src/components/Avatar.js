@@ -18,7 +18,8 @@ const Avatar = ({ userData, setUserData, username, position }) => {
 
     return (
         <div className="avatar">
-            <img className={position} src={avatar_url}/>
+            {/* <SearchBar /> */}
+            <img className={position} src={avatar_url} alt="Flower Friend" />
             { position === 'left' ? <AvatarLeft /> : <AvatarRight /> }
             <h1>{login}</h1>
         </div>
