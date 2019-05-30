@@ -55,3 +55,11 @@
   width: 5em;
   transform: skewX(5deg);
 }
+
+.innerBar {
+  width: 50px;
+}
+
+.timeContainer {
+  height: 80vh;
+}
