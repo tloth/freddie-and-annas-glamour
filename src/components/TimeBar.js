@@ -1,8 +1,11 @@
 import React from 'react';
 
-const TimeBar = props => {
+const TimeBar = ({userData}) => {
 
-    const [time, setTime] = React.useState(10);
+    let followerCount = 10;
+    if (userData) followerCount = userData.followers;
+
+    const [time, setTime] = React.useState(followerCount);
 
     const decrement = () => {
         setTime(oldTime => {
