@@ -21,11 +21,13 @@ const TimeBar = ({ userData, time, setTime }) => {
     }
 
     return (
-    <div className='timeContainer'> 
-        <p>TIME: {time}</p>
-        <InnerBar style={barStyle} className='innerBar' />
-    </div>
-         );
+        <div>
+            <div className='timeContainer'>
+                <div style={barStyle} className='innerBar'></div>
+            </div>
+            <p>TIME: {time}</p>
+        </div>
+    );
 }
 
 export default TimeBar;

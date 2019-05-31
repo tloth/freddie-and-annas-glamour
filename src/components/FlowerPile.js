@@ -12,8 +12,6 @@ const FlowerPile = ({ flowerCount, setFlowerCount, position, time}) => {
         };
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
-        } else {
-            alert('No more time, no more flowers!');
         };
     }, [time, position, setFlowerCount]);
 
