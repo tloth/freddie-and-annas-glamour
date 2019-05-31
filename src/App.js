@@ -17,10 +17,6 @@ function App() {
 
   return (
     <div className="App">
-       <SearchBar 
-        setUserData={setUserData1}
-        position='left'
-      />
       <FlowerPile
         flowerCount={flowerCount1}
         setFlowerCount={setFlowerCount1}
@@ -32,19 +28,15 @@ function App() {
         time={time1}
         setTime={setTime1}
         />
-      <Avatar 
-        userData={userData1}
-        position='left'
-      />
+      
+      { !userData1 ? <SearchBar setUserData={setUserData1} position='left'/> 
+        : <Avatar userData={userData1} position='left'/>
+      }
      
-     <SearchBar 
-        setUserData={setUserData2}
-        position='right'
-      />
-      <Avatar 
-        userData={userData2}
-        position='right'
-      />
+     { !userData2 ? <SearchBar setUserData={setUserData2} position='right'/> 
+        : <Avatar userData={userData2} position='right'/>
+      }
+
       <TimeBar
         userData={userData2}
         time={time2}

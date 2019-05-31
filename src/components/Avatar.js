@@ -12,11 +12,11 @@ const Avatar = ({ userData, position }) => {
     const { avatar_url, login } = userData;
 
     return (
-        <div className="avatar">
+        <div className="avatarContainer">
             {/* <SearchBar /> */}
             <img className={position} src={avatar_url} alt="Flower Friend" />
             <div className="bodyAndFlower">
-            { position === 'left' ? <AvatarLeft /> : <AvatarRight /> }
+            { position === 'left' ? <AvatarLeft className="avatar"/> : <AvatarRight className="avatar"/> }
             {/* { position === 'left' ? <Flower1 className="handFlower1" /> : <Flower2 className="handFlower2" /> } */}
             </div>
             <h1>{login}</h1>

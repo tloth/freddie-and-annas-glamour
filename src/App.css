@@ -1,10 +1,11 @@
 .App {
   text-align: center;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100vw;
-  height: 100vh;
+  width: calc(100vw-3em);
+  height: calc(100vh-3em);
+  padding: 3em;
 }
 
 .App-logo {
@@ -37,13 +38,29 @@
   }
 }
 
+.searchForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+}
 .avatar {
+  height: 15em;
+}
+
+.avatarContainer {
   display: flex;
   flex-direction: column;
   height: 60vh;
+  width: 10vw;
+
   align-items: center;
 }
 
+.flower {
+  width: 3em;
+  height: 3em;
+}
 .left {
   height: 5em;
   width: 5em;

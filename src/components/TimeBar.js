@@ -35,7 +35,7 @@ const TimeBar = ({ userData, time, setTime }) => {
     return (
     <div className='timeContainer'> 
         <button onClick={decrement}>CLICK ME</button> 
-        <p>Time: {time}</p>
+        <p>TIME: {time}</p>
         <InnerBar style={barStyle} className='innerBar' />
     </div>
          );

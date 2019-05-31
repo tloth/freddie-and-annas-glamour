@@ -1,4 +1,4 @@
-// import { token } from '../token';
+import { token } from '../token';
 
 const checkResponse = response => {
     if (response.status !== 200) {
@@ -10,7 +10,7 @@ const checkResponse = response => {
 
 export const getUserData = username => {
     let url = `https://api.github.com/users/${username}`;
-    // if (token) url = url.concat(`?access_token=${token}`);
+    if (token) url = url.concat(`?access_token=${token}`);
     console.log(url);
     return fetch(url)
             .then(checkResponse)

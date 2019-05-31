@@ -19,8 +19,8 @@ const FlowerPile = ({ flowerCount, setFlowerCount, position, time}) => {
     }, [time, position, setFlowerCount]);
     return (
     <div>
-        {position === 'left' ? <Flower1 /> : <Flower2 />}
-        <h2>Flower count: {
+        {position === 'left' ? <Flower1 className='flower' /> : <Flower2 className='flower'/>}
+        <h2>FLOWER COUNT: {
             flowerCount
         }</h2>
     </div>
