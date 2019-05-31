@@ -12,6 +12,22 @@ function App() {
   const [time1, setTime1] = React.useState(10);
   const [time2, setTime2] = React.useState(10);
 
+  const decrement = () => {
+    setTime1(oldTime => {
+       if (oldTime === 0) return 0;
+       else {
+            return oldTime - 1;
+       }
+    });
+    setTime2(oldTime => {
+      if (oldTime === 0) return 0;
+      else {
+           return oldTime - 1;
+      }
+    })
+    window.setTimeout(decrement, 1000);
+  };
+
   const [flowerCount1, setFlowerCount1] = React.useState(0);
   const [flowerCount2, setFlowerCount2] = React.useState(0);
 
@@ -33,6 +49,9 @@ function App() {
         : <Avatar userData={userData1} position='left'/>
       }
      
+
+     <button onClick={decrement}>FLOWER TIME</button> 
+
      { !userData2 ? <SearchBar setUserData={setUserData2} position='right'/> 
         : <Avatar userData={userData2} position='right'/>
       }
