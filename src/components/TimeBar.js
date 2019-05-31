@@ -16,29 +16,15 @@ const TimeBar = ({ userData, time, setTime }) => {
         if (userData) setBarHeight(time / userData.followers * 100);
     }, [userData, time]);
 
-    const decrement = () => {
-        setTime(oldTime => {
-            if (oldTime === 0) return 0;
-            else {
-                window.setTimeout(decrement, 1000);
-                return oldTime - 1;
-            }
-        })
-    };
-
-    console.log(barHeight);
-
     const barStyle = {
         height: barHeight + '%'
     }
 
     return (
-        <div>            
-            <div className='timeContainer'>
-                <div style={barStyle} className='innerBar' ></div>
-            </div>
-            <p>TIME: {time}</p>
-         </div>
+    <div className='timeContainer'> 
+        <p>TIME: {time}</p>
+        <InnerBar style={barStyle} className='innerBar' />
+    </div>
          );
 }
 
