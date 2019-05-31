@@ -6,6 +6,27 @@
   width: calc(100vw-3em);
   height: calc(100vh-3em);
   padding: 3em;
+  background-image: url('./assets/idyll.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: pink;
+}
+
+.container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100vw-3em);
+  height: calc(100vh-3em);
+  padding: 3em;
+}
+
+h2 {
+  font-size: 1em;
 }
 
 .App-logo {
@@ -74,11 +95,25 @@
 }
 
 .innerBar {
-  width: 50px;
+  width: 100%;
+  background-color: yellow;
+}
+
+.flowerTime {
+  display: flex;
+  width: 20vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .timeContainer {
-  height: 80vh;
+  height: 50vh;
+  width: 5em;
+  border: 0.25em solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 /* .bodyAndFlower {
