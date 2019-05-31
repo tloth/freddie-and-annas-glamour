@@ -16,7 +16,7 @@ const FlowerPile = ({ flowerCount, setFlowerCount, position, time}) => {
     } else {
         alert('TIME\'S UP BITCH');
     }
-    }, [time]);
+    }, [time, position, setFlowerCount]);
     return (
     <div>
         {position === 'left' ? <Flower1 /> : <Flower2 />}

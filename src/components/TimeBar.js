@@ -10,7 +10,7 @@ const TimeBar = ({ userData, time, setTime }) => {
         if (userData && userData.followers > 10) {
             setTime(userData.followers);
         }
-    }, [userData]);
+    }, [userData, setTime]);
 
     React.useEffect(() => {
         if (userData) setBarHeight(time/userData.followers*100);

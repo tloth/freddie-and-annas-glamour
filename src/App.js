@@ -3,6 +3,7 @@ import './App.css';
 import FlowerPile from './components/FlowerPile';
 import Avatar from './components/Avatar';
 import TimeBar from './components/TimeBar';
+import SearchBar from './components/SearchBar';
 
 function App() {
   const [userData1, setUserData1] = React.useState(null);
@@ -16,6 +17,10 @@ function App() {
 
   return (
     <div className="App">
+       <SearchBar 
+        setUserData={setUserData1}
+        position='left'
+      />
       <FlowerPile
         flowerCount={flowerCount1}
         setFlowerCount={setFlowerCount1}
@@ -29,15 +34,15 @@ function App() {
         />
       <Avatar 
         userData={userData1}
-        setUserData={setUserData1}
-        username='tloth'
         position='left'
       />
-      
+     
+     <SearchBar 
+        setUserData={setUserData2}
+        position='right'
+      />
       <Avatar 
         userData={userData2}
-        setUserData={setUserData2}
-        username='samhstn'
         position='right'
       />
       <TimeBar
