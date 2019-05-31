@@ -1,5 +1,6 @@
 import React from 'react';
-import { ReactComponent as Flower } from '../assets/flowerHead1.svg';
+import { ReactComponent as Flower1 } from '../assets/flowerHead1.svg';
+import { ReactComponent as Flower2 } from '../assets/flowerHead2.svg';
 
 const FlowerPile = ({ flowerCount, setFlowerCount, position, time}) => {
 
@@ -18,7 +19,7 @@ const FlowerPile = ({ flowerCount, setFlowerCount, position, time}) => {
     }, [time]);
     return (
     <div>
-        <Flower />
+        {position === 'left' ? <Flower1 /> : <Flower2 />}
         <h2>Flower count: {
             flowerCount
         }</h2>

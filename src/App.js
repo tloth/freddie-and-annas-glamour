@@ -30,14 +30,14 @@ function App() {
       <Avatar 
         userData={userData1}
         setUserData={setUserData1}
-        username='bobbysebolao'
+        username='seabasshoang'
         position='left'
       />
       
       <Avatar 
         userData={userData2}
         setUserData={setUserData2}
-        username='samhstn'
+        username='starsuit'
         position='right'
       />
       <TimeBar
