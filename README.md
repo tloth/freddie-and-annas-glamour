@@ -4,6 +4,6 @@ Welcome to our beautiful react / freddie and anna’s glamour / oops a daisy / s
 
 The aim of the game is to give as many flowers to your friend as possible. Two players play the game - one uses the letter 'a' to give a flower, and the other uses the letter 'l'. The time you have depends on how many followers you have on GitHub. It is a social commentary.
 
-PS. This game is not in a functional state.
+PS. This game is not in a functional state. You might have to refresh the page to load assets correctly.
 
 Netlify link: https://pedantic-lalande-031aef.netlify.com/
