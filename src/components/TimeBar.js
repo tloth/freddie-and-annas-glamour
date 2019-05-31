@@ -3,7 +3,7 @@ import React from 'react';
 import { ReactComponent as InnerBar } from '../assets/innerBar.svg';
 
 const TimeBar = ({ userData, time, setTime }) => {
-  
+
     const [barHeight, setBarHeight] = React.useState(100);
 
     React.useEffect(() => {
@@ -13,14 +13,11 @@ const TimeBar = ({ userData, time, setTime }) => {
     }, [userData, setTime]);
 
     React.useEffect(() => {
-        if (userData) setBarHeight(time/userData.followers*100);
+        if (userData) setBarHeight(time / userData.followers * 100);
     }, [userData, time]);
-    
-
-    console.log(barHeight);
 
     const barStyle = {
-        height: barHeight+'%'
+        height: barHeight + '%'
     }
 
     return (
