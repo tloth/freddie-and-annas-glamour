@@ -14,8 +14,8 @@ const SearchBar = ({position, setUserData}) => {
     }
 
     return (
-    <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Choose your flower friend</label>
+    <form className='searchForm' onSubmit={handleSubmit}>
+        <label htmlFor="username">CHOOSE YOUR FLOWER FRIEND, USER {position === 'left' ? 1 : 2}</label>
         <input
         id="username"
         className="searchbar_input"
