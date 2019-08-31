@@ -10,8 +10,8 @@ const FlowerPile = ({ flowerCount, setFlowerCount, position, time}) => {
             if (event.key === 'a' && position ==='left') setFlowerCount(prevCount => prevCount+1);
             if (event.key === 'l' && position ==='right') setFlowerCount(prevCount => prevCount+1);
         };
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
+        window.addEventListener('keyup', handleKeyDown);
+        return () => window.removeEventListener('keyup', handleKeyDown);
         };
     }, [time, position, setFlowerCount]);
 
