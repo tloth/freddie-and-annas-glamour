@@ -14,18 +14,21 @@ function App() {
 
   const decrement = () => {
     setTime1(oldTime => {
-       if (oldTime === 0) return 0;
-       else {
-            return oldTime - 1;
-       }
+      if (oldTime === 0) return 0;
+      else {
+        return oldTime - 1;
+      }
     });
     setTime2(oldTime => {
       if (oldTime === 0) return 0;
       else {
-           return oldTime - 1;
+        return oldTime - 1;
       }
-    })
+    });
     window.setTimeout(decrement, 1000);
+
+    const button = document.getElementById('startButton');
+    button.classList.add('hideButton');
   };
 
   const [flowerCount1, setFlowerCount1] = React.useState(0);
@@ -33,32 +36,43 @@ function App() {
 
   return (
     <div className="App">
-      
-      { !userData1 ? <SearchBar setUserData={setUserData1} position='left'/> 
-        : <div className="container">
-        <div className="flowerTime">
-        <FlowerPile flowerCount={flowerCount1} setFlowerCount={setFlowerCount1} 
-        time={time1} position='left'/>
-        <TimeBar userData={userData1} time={time1} setTime={setTime1}/> 
-        </div>
-        <Avatar userData={userData1} position='left'/>
-        </div>
-      }
-     
-
-     <button onClick={decrement}>FLOWER TIME</button> 
-
-     { !userData2 ? <SearchBar setUserData={setUserData2} position='right'/> 
-        : <div className="container">
-          <Avatar userData={userData2} position='right'/>
+      {!userData1 ? (
+        <SearchBar setUserData={setUserData1} position="left" />
+      ) : (
+        <div className="container">
           <div className="flowerTime">
-          <FlowerPile flowerCount={flowerCount2} setFlowerCount={setFlowerCount2}
-          time={time2} position='right'/>
-          <TimeBar userData={userData2} time={time2} setTime={setTime2}/>
+            <FlowerPile
+              flowerCount={flowerCount1}
+              setFlowerCount={setFlowerCount1}
+              time={time1}
+              position="left"
+            />
+            <TimeBar userData={userData1} time={time1} setTime={setTime1} />
+          </div>
+          <Avatar userData={userData1} position="left" />
+        </div>
+      )}
+
+      <button onClick={decrement} id="startButton">
+        FLOWER TIME
+      </button>
+
+      {!userData2 ? (
+        <SearchBar setUserData={setUserData2} position="right" />
+      ) : (
+        <div className="container">
+          <Avatar userData={userData2} position="right" />
+          <div className="flowerTime">
+            <FlowerPile
+              flowerCount={flowerCount2}
+              setFlowerCount={setFlowerCount2}
+              time={time2}
+              position="right"
+            />
+            <TimeBar userData={userData2} time={time2} setTime={setTime2} />
           </div>
         </div>
-      }
-      
+      )}
     </div>
   );
 }

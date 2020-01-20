@@ -64,6 +64,12 @@ h2 {
   }
 }
 
+/** ------------------------------------------------------------- **/
+
+.hideButton {
+  display: none;
+}
+
 .searchForm {
   display: flex;
   flex-direction: column;
